@@ -1,0 +1,24 @@
+php artisan serve
+php artisan tinker.
+DB::connection()->getPdo(); => Valida la conexion a la BD
+
+php artisan make:model Post -cmf
+-c = Controlador
+-m = modelo
+-f = Factoris
+
+Crear metodos del api con las banderas siguientes
+php artisan  make:controller Api/v1/PostController --api --model=Post
+
+Recurso de coleccion
+php artisan make:resource v2/PosCollection
+
+php artisan migrate --seed => ejecuta migracion y los seeder
+
+Sistema de logeo con laravle sanctum
+composer require laravel/sanctum
+
+Imsonia en el header pasar
+Accept => application/json
+Librarys
+- https://tailwindcss.com/
