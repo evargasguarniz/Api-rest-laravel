@@ -13,3 +13,6 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+
+ApiRestLaravel_access.log
+ApiRestLaravel_error.log
