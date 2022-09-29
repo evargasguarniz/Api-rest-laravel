@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProjectController;
-/*Route::get('/', function () {
+Route::get('/', function () {
     return view('welcome');
-});*/
+});
 
-Route::get('/',[PostController::class,'index']);
+Route::get('/hola',[PostController::class,'index']);
 
 Route::get('getAllProjects',[ProjectController::class,'getAllProjects']);
 Route::get('getAllProjectsQueryBuilder',[ProjectController::class,'getAllProjectsQueryBuilder']);
