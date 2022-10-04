@@ -12,8 +12,8 @@ class Citie extends Model
     //Indica que la clave primaria no es autoincrement
     //protected $keyType = 'string';
     protected $primaryKey = 'city_id';
-    //public $incrementing = false;
     //Destactiva el create_at y el updated_at
+    //public $incrementing = false;
     public $timestamps = false;
     //const CREATED_AT = 'creation_date';
     //const UPDATED_AT = 'last_update';

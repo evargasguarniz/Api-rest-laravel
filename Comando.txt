@@ -22,3 +22,18 @@ Imsonia en el header pasar
 Accept => application/json
 Librarys
 - https://tailwindcss.com/
+
+CURSO LARAVEL AVANZADO
+-Para trabajar con sqlite
+    sudo apt-get install php7.4-sqlite3
+-Las banderas le indican que cree un contralor de tipo api,modelo, seeder,migration,factory
+    php artisan make:model product --api --all
+-Ejecutar un solo seeder
+   php artisan db:seed --class=UserSeeder
+
+- Creando un Recurso
+    php artisan make:resource productResource
+- Creando una colleccion para un modelo
+    php artisan make:resource productCollection
+- Creando un request
+    php artisan make:request StoreProductRequest

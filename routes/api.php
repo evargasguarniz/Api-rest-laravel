@@ -24,8 +24,11 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\v1\PostController as PostV1;
 use App\Http\Controllers\Api\v2\PostController as PostV2;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 
 use App\Http\Controllers\Api\LoginController;
+use App\Http\Controllers\UserTokenController;
 use App\Models\Post;
 
 //V1
@@ -35,7 +38,16 @@ Route::apiResource('v1/posts', PostV1::class)
 
 // v2
 Route::apiResource('v2/posts', PostV2::class)
-    ->only(['index','show'])
+    ->only(['index','show']) //grupo de rutas que utilizan el mismo middleware
     ->middleware('auth:sanctum');
 
 Route::post('login', [LoginController::class, 'login']);
+
+//proyecto laravel avanzado
+
+Route::resource('products',ProductController::class)->middleware('auth:sanctum');
+Route::apiResource('categorias',CategoryController::class)->middleware('auth:sanctum');
+//Route::post('sanctum/token',[UserTokenController::class,'createToken'])->middleware('auth:sanctum');
+Route::post('sanctum/token',UserTokenController::class);
+//Route::get('product/{product}',[ProductController::class,'show']);
+//Route::get('products',[ProductController::class,'index']);
